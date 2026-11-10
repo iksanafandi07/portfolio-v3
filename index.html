@@ -12,7 +12,7 @@
 <style>
 :root{--bg:#080d1b;--white:#f4f7ff;--muted:#a3afc7;--line:#263653}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-behavior:smooth;scroll-padding-top:100px;overflow-x:hidden}
 body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 15%,#122b59 0,transparent 35%),radial-gradient(ellipse at 90% 65%,#10264b 0,transparent 35%),linear-gradient(130deg,#080d1b,#0a1021 65%,#080d1b)}
 #stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.8}
@@ -39,7 +39,7 @@ header{position:fixed;top:16px;left:0;width:100%;z-index:30;pointer-events:none}
 .nav a:hover,.nav a.active{background:#263b62;color:#fff}
 section{padding:105px 0;position:relative}
 
-.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 70px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 70px;overflow-x:hidden;overflow-x:clip}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}
 .hero h1{font:700 clamp(2.8rem,6vw,5.5rem)/.98 'Space Grotesk';letter-spacing:-.065em;margin-bottom:19px}
 .subtitle{font:600 clamp(1rem,2vw,1.25rem) 'Space Grotesk';margin-bottom:6px}
