@@ -58,19 +58,22 @@ section{padding:105px 0;position:relative}
 .socials a{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:#c5d5f5;font-size:.9rem;transition:.2s}
 .socials a:hover{background:#284b84;transform:translateY(-3px)}
 
-.id-wrap{position:relative;height:580px;margin-top:-130px;align-self:start}
-.rope{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.pend{position:absolute;left:0;top:0;transform-origin:50% 0;display:flex;flex-direction:column;align-items:center;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;will-change:transform}
-.pend.grab{cursor:grabbing}
-.clip{width:24px;height:18px;background:linear-gradient(#c3cfe2,#7d8ca6);border-radius:3px 3px 6px 6px;margin-bottom:-4px;position:relative;z-index:1}
-.id-card{width:min(290px,75vw);padding:13px;border-radius:17px;background:linear-gradient(145deg,#dce8f7,#73849f 50%,#e8eff8);color:#101a2c;box-shadow:0 30px 80px #0008}
-.id-photo{height:340px;border-radius:10px;background:linear-gradient(145deg,#172e52,#0a1428);overflow:hidden;position:relative}
-.ini{position:absolute;inset:0;display:grid;place-items:center;font:700 4rem 'Space Grotesk';color:#2c4d85}
-.id-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;pointer-events:none}
-.id-label{padding:13px 7px 5px;display:flex;justify-content:space-between;align-items:end}
-.id-label strong{font:700 1.05rem 'Space Grotesk'}
-.id-label small{font-size:.58rem;letter-spacing:.12em}
-.hint{position:absolute;bottom:0;color:#6f7f9f;font-size:.72rem}
+#idstage{position:relative;height:620px;margin-top:-130px;align-self:start}
+#idcv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#idwrap{position:absolute;left:0;top:0;width:0;height:0;will-change:transform;pointer-events:none}
+#idclip{position:absolute;left:-11px;top:-14px;width:22px;height:36px;border-radius:6px;background:linear-gradient(90deg,#8791a8,#eef1f8,#8791a8);box-shadow:0 2px 6px #0007}
+#idclip:after{content:"";position:absolute;left:50%;top:9px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#0a0f1d}
+#idcard{position:absolute;left:-115px;top:12px;width:230px;height:340px;perspective:900px;pointer-events:auto;touch-action:none;cursor:grab}
+#idface{position:relative;width:100%;height:100%;background:#e4dcc4;border-radius:14px;border:3px solid #1b2236;box-shadow:0 30px 60px #0009;overflow:hidden;color:#1b2236;transform-style:preserve-3d;user-select:none;-webkit-user-select:none;font-family:'DM Sans',system-ui,sans-serif}
+#idface:before{content:"";position:absolute;left:50%;top:10px;width:56px;height:12px;margin-left:-28px;border-radius:8px;background:#0a0f1d}
+#idface .ic-tag{position:absolute;left:12px;top:34px;background:#1b2236;color:#e4dcc4;font-weight:800;font-size:11px;padding:2px 8px;letter-spacing:.06em;margin:0}
+#idface .ic-role{position:absolute;left:14px;top:56px;font-weight:900;font-size:28px;line-height:.95;letter-spacing:-.01em;min-height:0;margin:0;color:#1b2236;font-family:inherit}
+#idface .ic-side{position:absolute;right:10px;top:114px;writing-mode:vertical-rl;font-weight:900;font-size:16px;letter-spacing:.06em}
+#idphoto{position:absolute;left:14px;top:114px;width:168px;height:140px;background:#3a4a6b center/cover no-repeat;border:2px solid #1b2236;display:grid;place-items:center;font:900 2.2rem 'Space Grotesk',sans-serif;color:#cfd8ee}
+#idface .ic-name{position:absolute;left:22px;top:236px;transform:rotate(-3deg);background:#f7f4ea;border:2px solid #1b2236;padding:4px 10px;font-weight:800;font-size:13px;letter-spacing:.06em;white-space:nowrap}
+#idface .ic-meta{position:absolute;left:14px;bottom:36px;font-weight:700;font-size:7.5px;letter-spacing:.1em;white-space:nowrap;border-top:2px solid #1b2236;padding-top:6px;width:202px}
+#idface .ic-foot{position:absolute;left:14px;bottom:12px;font-weight:900;font-size:14px;letter-spacing:.12em}
+#idshine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,#fff5 50%,transparent 65%);background-size:200% 100%;mix-blend-mode:soft-light}
 
 .section-title{margin-bottom:35px}
 .section-title h2{font:700 clamp(2rem,4.5vw,3.6rem) 'Space Grotesk';letter-spacing:-.05em}
@@ -88,6 +91,16 @@ section{padding:105px 0;position:relative}
 .timeline-item small{color:#7fa8ff}
 .timeline-item strong{display:block;margin:5px 0;font-size:.9rem}
 .timeline-item p{font-size:.8rem}
+
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.edu{display:flex;gap:20px;align-items:flex-start;padding:26px;border-radius:26px}
+.edu-ico{flex:none;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#1c3562,#14264a);border:1px solid #2c4676;color:#78aaff}
+.edu-ico svg{width:28px;height:28px}
+.edu .lv{display:block;color:#78aaff;letter-spacing:.2em;font-size:.68rem;font-weight:700;text-transform:uppercase}
+.edu h3{font:600 1.25rem 'Space Grotesk';margin:8px 0 6px}
+.edu-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.edu-year{background:#16254a;border-radius:12px;padding:9px 15px;font-weight:600;font-size:.85rem}
+.edu-now{border:1px solid #2c7a62;background:#0f3a35;color:#7ee6b8;border-radius:999px;padding:8px 14px;font-size:.78rem;font-weight:600}
 
 .music{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
 .player{background:linear-gradient(120deg,#142b4c,#10182c);border:1px solid #314768;border-radius:18px;padding:20px}
@@ -157,10 +170,9 @@ footer{border-top:1px solid #253653;padding:27px 0;color:#8292ad;font-size:.8rem
 .hero-copy{text-align:center}
 .hero-copy .desc{margin:auto}
 .buttons,.socials{justify-content:center}
-.id-wrap{margin-top:0;height:480px}
-.id-card{width:min(250px,68vw)}
-.id-photo{height:260px}
+#idstage{margin-top:0;height:600px}
 .about-grid,.contact-grid,.music{grid-template-columns:1fr}
+.edu-grid{grid-template-columns:1fr}
 .project-grid{grid-template-columns:1fr 1fr}
 .tech-grid{grid-template-columns:repeat(3,1fr)}
 }
@@ -171,6 +183,9 @@ header{top:9px}
 .hero h1{font-size:3.15rem}
 .project-grid,.timeline{grid-template-columns:1fr}
 section{padding:82px 0}
+.edu{padding:20px;gap:14px;border-radius:22px}
+.edu-ico{width:52px;height:52px;border-radius:15px}
+.edu h3{font-size:1.1rem}
 }
 @media(prefers-reduced-motion:reduce){
 *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
@@ -222,17 +237,20 @@ section{padding:82px 0}
 </div>
 </div>
 
-<div class="id-wrap reveal">
-<svg class="rope" aria-hidden="true"><path fill="none" stroke="#14284d" stroke-width="19" stroke-linejoin="round"/><path fill="none" stroke="#3b64b0" stroke-width="14" stroke-linejoin="round"/><path fill="none" stroke="#a9c4ff" stroke-width="1.5" stroke-dasharray="2 7" stroke-linejoin="round"/><circle r="7" fill="#c3cfe2" stroke="#7d8ca6" stroke-width="2"/></svg>
-<div class="pend" id="pend">
-<div class="clip"></div>
-<div class="id-card">
-<div class="id-photo"><span class="ini">IA</span><img src="profile.jpg" alt="Foto Ikhsan Afandi" draggable="false" onerror="this.style.display='none'"></div>
-<div class="id-label">
-<div><strong>IKHSAN AFANDI</strong><br><small>CREATIVE MEDIA</small></div>
-<small>PORTFOLIO<br>2026</small>
-</div>
-</div>
+<div id="idstage" class="reveal">
+<canvas id="idcv"></canvas>
+<div id="idwrap">
+<div id="idcard"><div id="idface">
+<div class="ic-tag">JUNIOR</div>
+<div class="ic-role">CREATIVE<br>DEVELOPER</div>
+<div class="ic-side">MULTIMEDIA</div>
+<div id="idphoto">IA</div>
+<div class="ic-name">IKHSAN AFANDI</div>
+<div class="ic-meta">DESIGN • VIDEO • TECHNOLOGY</div>
+<div class="ic-foot">EST. 2026</div>
+<div id="idshine"></div>
+</div></div>
+<div id="idclip"></div>
 </div>
 </div>
 
@@ -259,9 +277,97 @@ section{padding:82px 0}
 <div class="profile-row"><span>Domisili</span><b>Riau, Indonesia</b></div>
 <div class="profile-row"><span>Fokus</span><b>Video &amp; Live Production</b></div>
 </div>
-<div class="timeline">
-<div class="timeline-item"><small>EDUCATION</small><strong>SMK</strong><p>Jurusan DKV / Multimedia</p></div>
-<div class="timeline-item"><small>INTEREST</small><strong>Media Production</strong><p>Videografi, editing, dan visual storytelling.</p></div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+<div class="section-title reveal">
+<div class="tag">MY BACKGROUND</div>
+<h2>Education<span class="blue">.</span></h2>
+<p>Perjalanan pendidikan yang menjadi bagian dari proses belajar dan berkembang saya.</p>
+</div>
+<div class="edu-grid">
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<div>
+<span class="lv">Elementary School</span>
+<h3>SDN 017 Sencalang</h3>
+<p>Pendidikan Sekolah Dasar</p>
+<div class="edu-meta"><span class="edu-year">2015 – 2021</span></div>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<div>
+<span class="lv">Islamic Junior High School</span>
+<h3>MTsN 06 Banyuwangi</h3>
+<p>Pendidikan Madrasah Tsanawiyah</p>
+<div class="edu-meta"><span class="edu-year">2021 – 2023</span></div>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<div>
+<span class="lv">Junior High School</span>
+<h3>SMP Nurul Falah</h3>
+<p>Melanjutkan pendidikan setelah pindah sekolah</p>
+<div class="edu-meta"><span class="edu-year">2023 – 2024</span></div>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<div>
+<span class="lv">Vocational High School</span>
+<h3>SMK NU Miftahul Falah</h3>
+<p>Pendidikan Sekolah Menengah Kejuruan</p>
+<div class="edu-meta"><span class="edu-year">2024 – 2027</span><span class="edu-now">Currently Studying</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="interest">
+<div class="container">
+<div class="section-title reveal">
+<div class="tag">MY INTEREST</div>
+<h2>Interest<span class="blue">.</span></h2>
+<p>Hal-hal yang saya sukai dan terus saya pelajari di dunia media kreatif.</p>
+</div>
+<div class="edu-grid">
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
+<div>
+<span class="lv">Videography</span>
+<h3>Videografi</h3>
+<p>Mengambil gambar dan merekam momen dengan sudut pandang yang bercerita.</p>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg></div>
+<div>
+<span class="lv">Video Editing</span>
+<h3>Video Editing</h3>
+<p>Merangkai klip, audio, dan color grading menjadi karya yang utuh.</p>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg></div>
+<div>
+<span class="lv">Live Production</span>
+<h3>Live Production</h3>
+<p>Produksi siaran langsung menggunakan beberapa kamera dan OBS Studio.</p>
+</div>
+</article>
+<article class="panel edu reveal">
+<div class="edu-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
+<div>
+<span class="lv">Visual Storytelling</span>
+<h3>Visual Storytelling</h3>
+<p>Mengubah ide menjadi visual yang memiliki cerita dan makna.</p>
 </div>
 </article>
 </div>
@@ -446,42 +552,73 @@ c+=del?-1:1;setTimeout(type,del?45:85);
 })();
 })();
 
-/* KARTU ID GANTUNG: TALI LENTUR (VERLET) */
-(()=>{const pend=$('pend'),wrap=pend.parentElement,paths=wrap.querySelectorAll('.rope path'),pin=wrap.querySelector('.rope circle');
-const N=8,SEG=12,last=N+1;let CARD=230;
-const im=i=>i===0?0:i===last?.25:1;
-const P=Array.from({length:last+1},(_,i)=>({x:0,y:i*SEG,px:0,py:i*SEG}));
-let drag=false,off={x:0,y:0},lx=0,ly=0,t=0,ready=false;
-const pos=e=>{const r=wrap.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
-pend.addEventListener('pointerdown',e=>{drag=true;pend.classList.add('grab');pend.setPointerCapture(e.pointerId);const q=pos(e);off={x:P[last].x-q.x,y:P[last].y-q.y}});
-pend.addEventListener('pointermove',e=>{if(drag){const q=pos(e);P[last].x=q.x+off.x;P[last].y=q.y+off.y}});
-['pointerup','pointercancel'].forEach(n=>pend.addEventListener(n,()=>{drag=false;pend.classList.remove('grab')}));
-(function loop(){
-t++;const ax=wrap.clientWidth/2;if(t%30===1)CARD=Math.max(120,pend.offsetHeight*.5);
-if(!ready){P.forEach((p,i)=>{p.x=p.px=ax+(i===last?35:0)});lx=P[last].x;ly=P[last].y;ready=true}
-P[0].x=P[0].px=ax;P[0].y=P[0].py=0;
-if(drag){P[last].px=lx;P[last].py=ly}
-lx=P[last].x;ly=P[last].y;
-for(let i=1;i<=last;i++){
-const p=P[i];if(drag&&i===last)continue;
-const vx=(p.x-p.px)*.993,vy=(p.y-p.py)*.993;
-p.px=p.x;p.py=p.y;
-p.x+=vx+(i===last&&!still?Math.sin(t/60)*.09:0);p.y+=vy+.6;
+/* KARTU ID GANTUNG 3D */
+(function(){
+var stage=$('idstage'),cv=$('idcv'),ctx=cv.getContext('2d');
+var wrap=$('idwrap'),card=$('idcard'),face=$('idface'),shine=$('idshine'),photo=$('idphoto');
+var W,H,ax,L,seg,dpr,N=14,CL=190,AY=26,P=[],c1,lastW=0,vis=true;
+var im=new Image();im.onload=function(){photo.style.backgroundImage='url(profile.jpg)';photo.textContent=''};im.src='profile.jpg';
+function build(){
+  dpr=Math.min(devicePixelRatio||1,2);W=stage.clientWidth||360;H=stage.clientHeight||580;lastW=W;
+  cv.width=W*dpr;cv.height=H*dpr;
+  ax=W*0.5;L=Math.min(H*0.34,260);seg=L/N;
+  P=[];var ang=0.3;
+  for(var i=0;i<=N;i++){var x=ax+Math.sin(ang)*seg*i,y=AY+Math.cos(ang)*seg*i;P.push({x:x,y:y,px:x,py:y})}
+  var e=P[N],x1=e.x+Math.sin(ang)*CL,y1=e.y+Math.cos(ang)*CL;
+  c1={x:x1,y:y1,px:x1,py:y1};
 }
-for(let k=0;k<14;k++)for(let i=0;i<last;i++){
-const a=P[i],b=P[i+1],L=i===N?CARD:SEG,wa=im(i),wb=drag&&i+1===last?0:im(i+1);
-if(wa+wb===0)continue;
-const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1,k2=(d-L)/d/(wa+wb);
-a.x+=dx*k2*wa;a.y+=dy*k2*wa;b.x-=dx*k2*wb;b.y-=dy*k2*wb;
+build();
+addEventListener('resize',function(){if(stage.clientWidth!==lastW)build()});
+if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(stage);
+var drag=false,mx=0,my=0,ry=0,rw=0;
+function loc(e){var r=stage.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top}
+card.addEventListener('pointerdown',function(e){drag=true;loc(e);rw+=(Math.random()<.5?-1:1)*2;card.setPointerCapture(e.pointerId);card.style.cursor='grabbing'});
+card.addEventListener('pointermove',function(e){if(drag)loc(e)});
+function up(){drag=false;card.style.cursor='grab'}
+card.addEventListener('pointerup',up);card.addEventListener('pointercancel',up);
+var DT=1/180,G=1300*DT*DT,DAMP=0.9965;
+function con(a,b,d,wa,wb){
+  var dx=b.x-a.x,dy=b.y-a.y,l=Math.sqrt(dx*dx+dy*dy)||1e-4,k=(l-d)/l/(wa+wb);
+  a.x+=dx*k*wa;a.y+=dy*k*wa;b.x-=dx*k*wb;b.y-=dy*k*wb;
 }
-let d='M'+P[0].x+' '+P[0].y;
-for(let i=1;i<N;i++)d+=' Q'+P[i].x+' '+P[i].y+' '+(P[i].x+P[i+1].x)/2+' '+(P[i].y+P[i+1].y)/2;
-d+=' L'+P[N].x+' '+P[N].y;
-paths.forEach(p=>p.setAttribute('d',d));pin.setAttribute('cx',ax);pin.setAttribute('cy',0);
-const ang=Math.atan2(-(P[last].x-P[N].x),P[last].y-P[N].y);
-pend.style.transform='translate('+(P[N].x-pend.offsetWidth/2).toFixed(1)+'px,'+P[N].y.toFixed(1)+'px) rotate('+ang.toFixed(3)+'rad)';
-requestAnimationFrame(loop);
-})();
+function step(){
+  var i,p;
+  for(i=1;i<=N;i++){p=P[i];var vx=(p.x-p.px)*DAMP,vy=(p.y-p.py)*DAMP;p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+G}
+  var vx2=(c1.x-c1.px)*DAMP,vy2=(c1.y-c1.py)*DAMP;c1.px=c1.x;c1.py=c1.y;c1.x+=vx2;c1.y+=vy2+G*1.1;
+  if(drag){c1.x+=(mx-c1.x)*0.035;c1.y+=(my-c1.y)*0.035}
+  for(var it=0;it<14;it++){
+    P[0].x=ax;P[0].y=AY;
+    for(i=0;i<N;i++)con(P[i],P[i+1],seg,i==0?0:1,1);
+    con(P[N],c1,CL,1,0.45);
+  }
+}
+function draw(){
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  ctx.lineJoin='round';ctx.lineCap='butt';
+  function path(){ctx.beginPath();ctx.moveTo(P[0].x,P[0].y);for(var i=1;i<N;i++){var a=(P[i].x+P[i+1].x)/2,b=(P[i].y+P[i+1].y)/2;ctx.quadraticCurveTo(P[i].x,P[i].y,a,b)}ctx.lineTo(P[N].x,P[N].y)}
+  path();ctx.strokeStyle='#2c3552';ctx.lineWidth=26;ctx.stroke();
+  path();ctx.strokeStyle='#0d1220';ctx.lineWidth=23;ctx.stroke();
+  path();ctx.strokeStyle='#ffffff55';ctx.lineWidth=1.2;ctx.setLineDash([9,9]);ctx.stroke();ctx.setLineDash([]);
+  /* pelat penggantung tali */
+  ctx.beginPath();ctx.arc(ax,AY,13,0,6.283);var g=ctx.createRadialGradient(ax-4,AY-4,2,ax,AY,13);g.addColorStop(0,'#f1f4fa');g.addColorStop(1,'#7d8ca6');ctx.fillStyle=g;ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='#4b5873';ctx.stroke();
+  ctx.beginPath();ctx.arc(ax,AY,4.5,0,6.283);ctx.fillStyle='#0a0f1d';ctx.fill();
+}
+var last=performance.now(),acc=0;
+function tick(t){
+  if(!vis){last=t;requestAnimationFrame(tick);return}
+  acc+=Math.min((t-last)/1000,0.05);last=t;
+  while(acc>=DT){step();acc-=DT}
+  var e=P[N],dx=c1.x-e.x,dy=c1.y-e.y,th=Math.atan2(-dx,dy);
+  wrap.style.transform='translate('+e.x+'px,'+e.y+'px) rotate('+(th*180/Math.PI)+'deg)';
+  var vx=(c1.x-c1.px)/DT;
+  rw+=(-7*ry-2.4*rw+vx*0.0018)/60;ry+=rw/60;
+  ry=Math.max(-1.1,Math.min(1.1,ry));
+  var yd=still?0:ry*180/Math.PI;
+  face.style.transform='rotateY('+yd+'deg)';
+  shine.style.backgroundPosition=(50+yd*2)+'% 0';
+  draw();requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
 })();
 
 /* SCROLL REVEAL */
@@ -535,7 +672,7 @@ location.href='mailto:iksanafandi072@gmail.com?subject='+encodeURIComponent('Pes
 });
 
 /* NAVIGASI AKTIF + KAPSUL KACA MELUNCUR */
-const links=[...document.querySelectorAll('.nav a')],alias={interests:'about'};
+const links=[...document.querySelectorAll('.nav a')],alias={interests:'about',education:'about',interest:'about'};
 const pill=document.createElement('i');pill.className='nav-pill';
 document.querySelector('.nav').prepend(pill);
 function movePill(snap){
