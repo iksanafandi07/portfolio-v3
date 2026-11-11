@@ -64,16 +64,16 @@ section{padding:105px 0;position:relative}
 #idclip{position:absolute;left:-11px;top:-14px;width:22px;height:36px;border-radius:6px;background:linear-gradient(90deg,#8791a8,#eef1f8,#8791a8);box-shadow:0 2px 6px #0007}
 #idclip:after{content:"";position:absolute;left:50%;top:9px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#0a0f1d}
 #idcard{position:absolute;left:-115px;top:12px;width:230px;height:340px;perspective:900px;pointer-events:auto;touch-action:none;cursor:grab}
-#idface{position:relative;width:100%;height:100%;background:#e4dcc4;border-radius:14px;border:3px solid #1b2236;box-shadow:0 30px 60px #0009;overflow:hidden;color:#1b2236;transform-style:preserve-3d;user-select:none;-webkit-user-select:none;font-family:'DM Sans',system-ui,sans-serif}
-#idface:before{content:"";position:absolute;left:50%;top:10px;width:56px;height:12px;margin-left:-28px;border-radius:8px;background:#0a0f1d}
-#idface .ic-tag{position:absolute;left:12px;top:34px;background:#1b2236;color:#e4dcc4;font-weight:800;font-size:11px;padding:2px 8px;letter-spacing:.06em;margin:0}
-#idface .ic-role{position:absolute;left:14px;top:56px;font-weight:900;font-size:28px;line-height:.95;letter-spacing:-.01em;min-height:0;margin:0;color:#1b2236;font-family:inherit}
-#idface .ic-side{position:absolute;right:10px;top:114px;writing-mode:vertical-rl;font-weight:900;font-size:16px;letter-spacing:.06em}
-#idphoto{position:absolute;left:14px;top:114px;width:168px;height:140px;background:#3a4a6b center/cover no-repeat;border:2px solid #1b2236;display:grid;place-items:center;font:900 2.2rem 'Space Grotesk',sans-serif;color:#cfd8ee}
-#idface .ic-name{position:absolute;left:22px;top:236px;transform:rotate(-3deg);background:#f7f4ea;border:2px solid #1b2236;padding:4px 10px;font-weight:800;font-size:13px;letter-spacing:.06em;white-space:nowrap}
-#idface .ic-meta{position:absolute;left:14px;bottom:36px;font-weight:700;font-size:7.5px;letter-spacing:.1em;white-space:nowrap;border-top:2px solid #1b2236;padding-top:6px;width:202px}
-#idface .ic-foot{position:absolute;left:14px;bottom:12px;font-weight:900;font-size:14px;letter-spacing:.12em}
-#idshine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,#fff5 50%,transparent 65%);background-size:200% 100%;mix-blend-mode:soft-light}
+#idface{position:relative;width:100%;height:100%;background:radial-gradient(120% 55% at 92% 0%,#33467a66,transparent 60%),linear-gradient(155deg,#1a2540,#0d1528 58%,#121b33);border-radius:14px;border:2px solid #3a4770;box-shadow:0 30px 60px #000a,inset 0 0 0 1px #ffffff14,inset 0 0 0 7px #0d1528,inset 0 0 0 8px #c9a86a40;overflow:hidden;color:#f3eee2;transform-style:preserve-3d;user-select:none;-webkit-user-select:none;font-family:'DM Sans',system-ui,sans-serif}
+#idface:before{content:"";position:absolute;left:50%;top:10px;width:56px;height:12px;margin-left:-28px;border-radius:8px;background:#03060e;box-shadow:inset 0 1px 3px #000,0 0 0 1px #3a477088}
+#idface .ic-tag{position:absolute;left:12px;top:34px;background:linear-gradient(135deg,#e3c98f,#b08d4c);color:#0d1528;font-weight:800;font-size:11px;padding:2px 8px;letter-spacing:.06em;margin:0}
+#idface .ic-role{position:absolute;left:14px;top:56px;font-weight:900;font-size:28px;line-height:.95;letter-spacing:-.01em;min-height:0;margin:0;color:#f6f1e5;font-family:inherit}
+#idface .ic-side{position:absolute;right:10px;top:114px;writing-mode:vertical-rl;font-weight:900;font-size:16px;letter-spacing:.06em;color:#d4b676}
+#idphoto{position:absolute;left:14px;top:114px;width:168px;height:140px;background:#26335a center/cover no-repeat;border:2px solid #c9a86a;box-shadow:0 6px 18px #0008;display:grid;place-items:center;font:900 2.2rem 'Space Grotesk',sans-serif;color:#cfd8ee}
+#idface .ic-name{position:absolute;left:22px;top:236px;transform:rotate(-3deg);background:#0b1222;color:#f6f1e5;border:2px solid #c9a86a;padding:4px 10px;font-weight:800;font-size:13px;letter-spacing:.06em;white-space:nowrap;box-shadow:0 4px 12px #0009}
+#idface .ic-meta{position:absolute;left:14px;bottom:36px;font-weight:700;font-size:7.5px;letter-spacing:.1em;white-space:nowrap;border-top:2px solid #c9a86a;color:#aab5d0;padding-top:6px;width:202px}
+#idface .ic-foot{position:absolute;left:14px;bottom:12px;font-weight:900;font-size:14px;letter-spacing:.12em;color:#d4b676}
+#idshine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,#ffffff26 50%,transparent 65%);background-size:200% 100%;mix-blend-mode:screen}
 
 .section-title{margin-bottom:35px}
 .section-title h2{font:700 clamp(2rem,4.5vw,3.6rem) 'Space Grotesk';letter-spacing:-.05em}
@@ -562,7 +562,7 @@ function build(){
   dpr=Math.min(devicePixelRatio||1,2);W=stage.clientWidth||360;H=stage.clientHeight||580;lastW=W;
   cv.width=W*dpr;cv.height=H*dpr;
   ax=W*0.5;L=Math.min(H*0.34,260);seg=L/N;
-  P=[];var ang=0.3;
+  P=[];var ang=0.12;
   for(var i=0;i<=N;i++){var x=ax+Math.sin(ang)*seg*i,y=AY+Math.cos(ang)*seg*i;P.push({x:x,y:y,px:x,py:y})}
   var e=P[N],x1=e.x+Math.sin(ang)*CL,y1=e.y+Math.cos(ang)*CL;
   c1={x:x1,y:y1,px:x1,py:y1};
@@ -576,16 +576,16 @@ card.addEventListener('pointerdown',function(e){drag=true;loc(e);rw+=(Math.rando
 card.addEventListener('pointermove',function(e){if(drag)loc(e)});
 function up(){drag=false;card.style.cursor='grab'}
 card.addEventListener('pointerup',up);card.addEventListener('pointercancel',up);
-var DT=1/180,G=1300*DT*DT,DAMP=0.9965;
+var DT=1/180,G=600*DT*DT,DAMP=0.9945,VMAX=2.2;
 function con(a,b,d,wa,wb){
   var dx=b.x-a.x,dy=b.y-a.y,l=Math.sqrt(dx*dx+dy*dy)||1e-4,k=(l-d)/l/(wa+wb);
   a.x+=dx*k*wa;a.y+=dy*k*wa;b.x-=dx*k*wb;b.y-=dy*k*wb;
 }
 function step(){
   var i,p;
-  for(i=1;i<=N;i++){p=P[i];var vx=(p.x-p.px)*DAMP,vy=(p.y-p.py)*DAMP;p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+G}
-  var vx2=(c1.x-c1.px)*DAMP,vy2=(c1.y-c1.py)*DAMP;c1.px=c1.x;c1.py=c1.y;c1.x+=vx2;c1.y+=vy2+G*1.1;
-  if(drag){c1.x+=(mx-c1.x)*0.035;c1.y+=(my-c1.y)*0.035}
+  for(i=1;i<=N;i++){p=P[i];var vx=(p.x-p.px)*DAMP,vy=(p.y-p.py)*DAMP,sp=Math.sqrt(vx*vx+vy*vy);if(sp>VMAX){vx*=VMAX/sp;vy*=VMAX/sp}p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+G}
+  var vx2=(c1.x-c1.px)*DAMP,vy2=(c1.y-c1.py)*DAMP,sp2=Math.sqrt(vx2*vx2+vy2*vy2);if(sp2>VMAX){vx2*=VMAX/sp2;vy2*=VMAX/sp2}c1.px=c1.x;c1.py=c1.y;c1.x+=vx2;c1.y+=vy2+G*1.1;
+  if(drag){c1.x+=(mx-c1.x)*0.025;c1.y+=(my-c1.y)*0.025}
   for(var it=0;it<14;it++){
     P[0].x=ax;P[0].y=AY;
     for(i=0;i<N;i++)con(P[i],P[i+1],seg,i==0?0:1,1);
@@ -611,7 +611,7 @@ function tick(t){
   var e=P[N],dx=c1.x-e.x,dy=c1.y-e.y,th=Math.atan2(-dx,dy);
   wrap.style.transform='translate('+e.x+'px,'+e.y+'px) rotate('+(th*180/Math.PI)+'deg)';
   var vx=(c1.x-c1.px)/DT;
-  rw+=(-7*ry-2.4*rw+vx*0.0018)/60;ry+=rw/60;
+  rw+=(-5*ry-2.6*rw+vx*0.0012)/60;ry+=rw/60;
   ry=Math.max(-1.1,Math.min(1.1,ry));
   var yd=still?0:ry*180/Math.PI;
   face.style.transform='rotateY('+yd+'deg)';
